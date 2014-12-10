@@ -1,6 +1,8 @@
 package ma.sqli.echalling.sample.dao;
 
-public class GenericDao<T, K> {
+import ma.sqli.echalling.sample.dao.util.DaoSupport;
+
+public class GenericDao<T, K> extends DaoSupport{
 
     private Class<T> persistentClass;
 

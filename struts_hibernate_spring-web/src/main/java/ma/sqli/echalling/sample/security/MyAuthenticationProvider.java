@@ -25,7 +25,9 @@ public class MyAuthenticationProvider implements AuthenticationProvider {
         if (user == null) return null;
 
         List<GrantedAuthority> grantedAuths = new ArrayList<GrantedAuthority>();
+
         grantedAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
+
         Authentication auth = new UsernamePasswordAuthenticationToken(user, password, grantedAuths);
 
         return auth;

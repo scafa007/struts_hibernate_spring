@@ -23,6 +23,8 @@ public class IndexAction extends ActionSupport {
     })
     public String execute() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        authentication.getPrincipal();
+
 
         return ERROR;
     }
